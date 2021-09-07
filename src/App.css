@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+.mt-15 {
+    margin-top: 15px !important;
+}
+.mt-40 {
+    margin-top: 40px !important;
+}
+.p-0 {
+    padding: 0 !important;
+}
+.ml-0{
+    margin-left: 0 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mr-0{
+    margin-right: 0 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button.ui.basic.compact.icon.button {
+    padding: 11px;
+    border: 1px solid #ccc;
+    margin: 2px;
+    border-radius: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button.ui.basic.compact.icon.button {}
+
+.ui.segment.clndr-calendars-segment.clndr-floating.clndr-left {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 11px;
+    border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+button.ui.compact.fluid.button.clndr-button-today {
+    border: 0;
+    padding: 5px 30px;
+    border-radius: 4px;
+    background: #0d6efd;
+    color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"] {}
+
+.ui.icon.input.ui.container.p-0 input {
+    width: 100%;
+    padding: 5px;
+    height: 38px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.field {
+    width: 100%;
 }
