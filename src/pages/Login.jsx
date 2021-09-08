@@ -32,7 +32,7 @@ const Login = props => {
             localStorage.setItem('token', token);
             
             Auth.login(() => {
-                props.history.push("/");
+                window.location.reload();
             });
 
         }).catch(e => {
