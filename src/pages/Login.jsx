@@ -1,12 +1,22 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { Redirect } from 'react-router';
+import { Route } from 'workbox-routing';
 import { LoginAction } from '../actions/Actions';
+import Auth from '../components/Auth';
 
 
-const Login = () => {
+const Login = props => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
+    const GetLocalToken = localStorage.getItem('token');
+    if(GetLocalToken != null && GetLocalToken != ''){
+        return (
+            <Redirect to='/' />
+        );
+    }
 
     const _loginAction = (e) => {
         e.preventDefault();
@@ -20,6 +30,11 @@ const Login = () => {
         axios.post('/login', data).then(res => {
             const token = res.data.token;
             localStorage.setItem('token', token);
+            
+            Auth.login(() => {
+                props.history.push("/");
+            });
+
         }).catch(e => {
             console.log(e)
         }) 
